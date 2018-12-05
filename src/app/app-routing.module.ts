@@ -3,15 +3,6 @@ import { NgModule } from '@angular/core';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { AuthGuard } from './guard/auth.guard';
 
-import {
-  NbAuthComponent,
-  NbLoginComponent,
-  NbLogoutComponent,
-  NbRegisterComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent,
-} from '@nebular/auth';
-
 const routes: Routes = [
   {
     path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule',
