@@ -35,8 +35,8 @@
     "postinstall": "ng build --aot --prod"
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "0.10.2",
     "@agm/core": "^1.0.0-beta.5",
+    "@angular-devkit/build-angular": "0.10.2",
     "@angular/animations": "^7.0.3",
     "@angular/cdk": "^7.0.3",
     "@angular/cli": "^7.0.3",

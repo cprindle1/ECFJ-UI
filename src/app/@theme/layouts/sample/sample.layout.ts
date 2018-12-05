@@ -44,6 +44,11 @@ import { StateService } from '../../../@core/data/state.service';
       <nb-layout-column class="small" *ngIf="layout.id === 'three-column'">
         <nb-menu [items]="subMenu"></nb-menu>
       </nb-layout-column>
+
+      <nb-layout-footer fixed>
+        <ngx-footer></ngx-footer>
+      </nb-layout-footer>
+
       <nb-sidebar class="settings-sidebar"
                    tag="settings-sidebar"
                    state="collapsed"
@@ -69,10 +74,10 @@ export class SampleLayoutComponent implements OnDestroy {
   currentTheme: string;
 
   constructor(protected stateService: StateService,
-    protected menuService: NbMenuService,
-    protected themeService: NbThemeService,
-    protected bpService: NbMediaBreakpointsService,
-    protected sidebarService: NbSidebarService) {
+              protected menuService: NbMenuService,
+              protected themeService: NbThemeService,
+              protected bpService: NbMediaBreakpointsService,
+              protected sidebarService: NbSidebarService) {
     this.stateService.onLayoutState()
       .pipe(takeWhile(() => this.alive))
       .subscribe((layout: string) => this.layout = layout);
@@ -101,7 +106,7 @@ export class SampleLayoutComponent implements OnDestroy {
       .pipe(takeWhile(() => this.alive))
       .subscribe(theme => {
         this.currentTheme = theme.name;
-      });
+    });
   }
 
   ngOnDestroy() {
