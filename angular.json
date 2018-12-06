@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ecfj": {
+    "ECFJ": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ecfj",
+            "outputPath": "dist/ECFJ",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -33,10 +33,12 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [{
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -46,29 +48,31 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [{
-                "type": "initial",
-                "maximumWarning": "2mb",
-                "maximumError": "5mb"
-              }]
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ecfj:build"
+            "browserTarget": "ECFJ:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ecfj:build:production"
+              "browserTarget": "ECFJ:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ecfj:build"
+            "browserTarget": "ECFJ:build"
           }
         },
         "test": {
@@ -102,7 +106,7 @@
         }
       }
     },
-    "ecfj-e2e": {
+    "ECFJ-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ecfj:serve"
+            "devServerTarget": "ECFJ:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ecfj:serve:production"
+              "devServerTarget": "ECFJ:serve:production"
             }
           }
         },
@@ -131,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "ecfj"
+  "defaultProject": "ECFJ"
 }
