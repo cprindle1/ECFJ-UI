@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ECFJ": {
+    "ecfj": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ECFJ",
+            "outputPath": "dist/ecfj",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ECFJ:build"
+            "browserTarget": "ecfj:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ECFJ:build:production"
+              "browserTarget": "ecfj:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ECFJ:build"
+            "browserTarget": "ecfj:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "ECFJ-e2e": {
+    "ecfj-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ECFJ:serve"
+            "devServerTarget": "ecfj:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ECFJ:serve:production"
+              "devServerTarget": "ecfj:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "ECFJ"
+  "defaultProject": "ecfj"
 }
